@@ -18,7 +18,8 @@ function Banner() {
     >
       <Row justify="center" align="middle" > 
         <Col>
-          <h1>Logan Hobson's Portfolio</h1>
+          <h1 align="center" style={{fontSize: 48}}>Logan Hobson's Portfolio</h1>
+          <p align="center" style={{fontSize: 24, color: '#666', fontStyle: 'italic'}}>Passionate Game Developer and Programmer</p>
         </Col>
       </Row>
     </div>

@@ -45,8 +45,19 @@ function NavBar() {
               border: 'none', 
             }}
           >
-            <Link to="home" smooth={true} duration={500}>
+            <Link to="home" smooth={true} duration={200}>
               Home
+            </Link>
+          </Menu.Item>
+          <Menu.Item
+            key="projects"
+            style={{
+              backgroundColor: selectedKey === 'projects' ? 'transparent' : undefined, 
+              border: 'none', 
+            }}
+          >
+            <Link to="projects" smooth={true} duration={200}>
+              Projects
             </Link>
           </Menu.Item>
           <Menu.Item
@@ -56,7 +67,7 @@ function NavBar() {
               border: 'none',
             }}
           >
-            <Link to="skills" smooth={true} duration={500}>
+            <Link to="skills" smooth={true} duration={200}>
               Skills
             </Link>
           </Menu.Item>
@@ -67,7 +78,7 @@ function NavBar() {
               border: 'none',
             }}
           >
-            <Link to="contact" smooth={true} duration={500}>
+            <Link to="contact" smooth={true} duration={200}>
               Contact
             </Link>
           </Menu.Item>

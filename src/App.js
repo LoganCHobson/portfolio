@@ -50,7 +50,7 @@ function App() {
         <div id="home">
           <Banner />
         </div>
-        <div>
+        <div id="projects">
           <GameTilesGrid games={games} openModal={openModal} />
         </div>
 
