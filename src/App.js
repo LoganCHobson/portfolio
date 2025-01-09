@@ -1,54 +1,75 @@
-import React from "react";
-import "./App.css";
-import GameGrid from "./GameGrid"; // Assuming you already have this component
+import React, { useState } from 'react';
+import { Layout } from 'antd';
+import NavBar from './NavBar';
+import Banner from './Banner';
+import GameModal from './GameModal';
+import Skills from './Skills';
+import Contact from './Contact';
+import GameTilesGrid from './GameGrid';
+const { Content } = Layout;
 
 function App() {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [selectedGame, setSelectedGame] = useState({
+    title: 'Game Title',
+    image1: 'path/to/image1.jpg',
+    image2: 'path/to/image2.jpg',
+    image3: 'path/to/image3.jpg',
+    description: 'A brief description of the game.',
+  });
+
+  const openModal = (game) => {
+    setSelectedGame(game);
+    setIsModalVisible(true);
+  };
+
+  const closeModal = () => setIsModalVisible(false);
+
+  const games = [
+    {
+      title: 'Game 1',
+      image1: 'path/to/image1.jpg',
+      description: 'A fun game about...',
+    },
+    {
+      title: 'Game 2',
+      image1: 'path/to/image2.jpg',
+      description: 'An exciting adventure where...',
+    },
+    {
+      title: 'Game 3',
+      image1: 'path/to/image3.jpg',
+      description: 'A puzzle game where...',
+    },
+  ];
+
   return (
-    <div className="App">
-      {/* Banner */}
-      <header className="banner">
-        <h1>Logan Hobson</h1>
-      </header>
-
-      {/* Navigation */}
-      <nav className="floating-nav">
-        <ul>
-          <li><a href="#games">Games</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      {/* Games Section */}
-      <section id="games" className="games-section">
-        <h2>My Games</h2>
-        <GameGrid />
-      </section>
-
-      {/* Skills Section */}
-      <section id="skills" className="skills-section">
-        <h2>Skills</h2>
-        <div className="progress-bar">
-          <div className="progress" style={{ width: "90%" }}></div>
-          <span>React</span>
+    <Layout >
+      <NavBar />
+      <Content style={{ marginTop: '64px'}}> 
+        <div id="home" >
+          <Banner />
         </div>
-        <div className="progress-bar">
-          <div className="progress" style={{ width: "80%" }}></div>
-          <span>Unity</span>
-        </div>
-        <div className="progress-bar">
-          <div className="progress" style={{ width: "75%" }}></div>
-          <span>C#</span>
-        </div>
-      </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="contact-section">
-        <h2>Contact</h2>
-        <p>Email: logan@example.com</p>
-        <p>LinkedIn: linkedin.com/in/loganhobson</p>
-      </section>
-    </div>
+        <div >
+          <GameTilesGrid games={games} openModal={openModal} />
+        </div>
+
+        <div id="skills" >
+          <Skills />
+        </div>
+
+        <div id="contact" >
+          <Contact />
+        </div>
+      </Content>
+
+      <GameModal
+        game={selectedGame}
+        isVisible={isModalVisible}
+        onClose={closeModal}
+      />
+    </Layout>
   );
 }
 

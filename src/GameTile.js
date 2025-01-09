@@ -1,13 +1,20 @@
 import React from 'react';
+import { Card } from 'antd';
+import './GameTile.css';
 
-function GameTile({ game, onClick }) {
+const { Meta } = Card;
+
+const GameTile = ({ game, openModal }) => {
   return (
-    <div className="game-tile" onClick={() => onClick(game)}>
-      <img src={game.image} alt={game.title} />
-      <h3>{game.title}</h3>
-      <p>{game.description}</p>
+    <div className="game-tile" onClick={() => openModal(game)}>
+      <Card
+        hoverable
+        cover={<img alt={game.title} src={game.image1} />}
+      >
+        <Meta title={game.title} description={game.description} />
+      </Card>
     </div>
   );
-}
+};
 
 export default GameTile;

@@ -1,37 +1,55 @@
 import React from 'react';
-import GameTile from './GameTile';  // Import the GameTile component
-import GameModal from './GameModal'; // Import the GameModal component
+import GameTile from './GameTile';
 
-const games = [
-  {
-    title: 'Game 1',
-    image: 'path/to/game1-image.jpg',
-    description: 'A brief description of Game 1.',
-    id: 1
-  },
-  {
-    title: 'Game 2',
-    image: 'path/to/game2-image.jpg',
-    description: 'A brief description of Game 2.',
-    id: 2
-  },
-  // Add more games here
-];
-
-export default function GameGrid() {
-  const [selectedGame, setSelectedGame] = React.useState(null);
-
-  const handleTileClick = (game) => {
-    setSelectedGame(game);
-  };
-
+const GameTilesGrid = ({ games, openModal }) => {
   return (
-    <div className="game-grid">
-      {games.map((game) => (
-        <GameTile key={game.id} game={game} onClick={handleTileClick} />
-      ))}
+    <div
+      className="game-tiles-grid"
+      style={{
+        backgroundColor: '#F6F6F6',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: '50px 20px',
+        width: '100vw',
+        boxSizing: 'border-box',
+      }}
+    >
+      {/* Projects Header */}
+      <div
+        style={{
+          width: '100%',
+          textAlign: 'center',
+          marginBottom: '30px',
+        }}
+      >
+        <h2
+          style={{
+            textDecoration: 'underline',
+            fontSize: '2rem',
+            margin: 0,
+          }}
+        >
+          Projects
+        </h2>
+      </div>
 
-      {selectedGame && <GameModal game={selectedGame} onClose={() => setSelectedGame(null)} />}
+      {/* Game Tiles Grid */}
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '20px',
+          width: '100%',
+          maxWidth: '1200px',
+        }}
+      >
+        {games.map((game, index) => (
+          <GameTile key={index} game={game} openModal={openModal} />
+        ))}
+      </div>
     </div>
   );
-}
+};
+
+export default GameTilesGrid;

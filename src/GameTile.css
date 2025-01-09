@@ -1,0 +1,25 @@
+.game-tile {
+    margin: 15px;
+  }
+  
+  .game-tile .ant-card {
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .game-tile .ant-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .game-tile .ant-card-cover img {
+    border-radius: 10px;
+  }
+  
+  .game-tiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+   
+  }
+  
