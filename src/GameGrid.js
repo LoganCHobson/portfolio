@@ -6,16 +6,15 @@ const GameTilesGrid = ({ games, openModal }) => {
     <div
       className="game-tiles-grid"
       style={{
-        backgroundColor: '#F6F6F6',
+        backgroundColor: '#F5F5F5',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        padding: '50px 20px',
         width: '100vw',
         boxSizing: 'border-box',
       }}
     >
-      {/* Projects Header */}
+     
       <div
         style={{
           width: '100%',
@@ -25,6 +24,7 @@ const GameTilesGrid = ({ games, openModal }) => {
       >
         <h2
           style={{
+            marginTop: '30px', 
             textDecoration: 'underline',
             fontSize: '2rem',
             margin: 0,
@@ -34,7 +34,7 @@ const GameTilesGrid = ({ games, openModal }) => {
         </h2>
       </div>
 
-      {/* Game Tiles Grid */}
+
       <div
         style={{
           display: 'grid',
@@ -51,5 +51,4 @@ const GameTilesGrid = ({ games, openModal }) => {
     </div>
   );
 };
-
 export default GameTilesGrid;

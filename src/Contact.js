@@ -12,13 +12,12 @@ function Contact() {
     <div
       style={{
         minHeight: '300px',
-        backgroundColor: '#F6F6F6',
+        backgroundColor: '#F5F5F5',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        padding: '50px 20px',
         width: '100vw',
-        boxSizing: 'border-box',
+        
       }}
     >
       <h2
@@ -100,5 +99,4 @@ function Contact() {
     </div>
   );
 }
-
 export default Contact;

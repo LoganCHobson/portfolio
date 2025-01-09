@@ -76,5 +76,4 @@ function NavBar() {
     </Header>
   );
 }
-
 export default NavBar;

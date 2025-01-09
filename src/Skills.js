@@ -23,7 +23,7 @@ function Skills() {
       
       padding: '0',
       position: 'relative'}}>
-    <Layout style={{ textAlign: 'center'}}>
+    <Layout style={{backgroundColor: '#EDEDED', textAlign: 'center' }}>
       <h2 justify="center"
         style={{
           marginBottom: '30px', 
@@ -50,5 +50,4 @@ function Skills() {
     </div>
   );
 }
-
 export default Skills;

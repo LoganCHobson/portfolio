@@ -1,17 +1,24 @@
 import React from 'react';
-import { Modal } from 'antd';
+import { Modal, Carousel } from 'antd';
 
 const GameModal = ({ game, isVisible, onClose }) => {
+  if (!game) return null; 
   return (
     <Modal
       title={game.title}
-      visible={isVisible}
+      open={isVisible}
       onCancel={onClose}
       footer={null}
     >
-      <img alt={game.title} src={game.image1} style={{ width: '100%' }} />
+      
+      <Carousel dots={true} autoplay>
+  {game.images.map((image, index) => (
+    <div key={index}>
+      <img alt={game.title} src={image} style={{ width: '100%' }} />
+    </div>
+  ))}
+</Carousel>
       <p>{game.description}</p>
-      {/* Add more content here if necessary */}
     </Modal>
   );
 };
