@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/LoganCHobson/portfolio",
+  "homepage": "https://loganchobson.github.io/portfolio",
   "dependencies": {
     "antd": "^5.23.0",
     "cra-template": "1.2.0",
