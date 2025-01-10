@@ -22,24 +22,30 @@ function App() {
   const games = [
     {
       title: 'Wakefield',
-      frontImage: "/portfolio/WakeFieldImages/Title.png",
+      frontImage: "/portfolio/WakeFieldResources/Title.png",
       images: [
-        '/portfolio/WakeFieldImages/img1.png',
-        '/portfolio/WakeFieldImages/img2.png',
-        '/portfolio/WakeFieldImages/img3.png',
-        '/portfolio/WakeFieldImages/img4.png'
+        '/portfolio/WakeFieldResources/img1.png',
+        '/portfolio/WakeFieldResources/img2.png',
+        '/portfolio/WakeFieldResources/img3.png',
+        '/portfolio/WakeFieldResources/img4.png'
       ], 
-      description: 'A fun game about...',
+      frontDescription: "A single player, first person, rogue-like, made in a Game Jam.",
+      description: 'Wakefield is a fast paced rogue like with shifting rooms and scaling enemies. You must traverse the simulation and fight enemies so you can return to the hub to buy more upgrades lest the AI overwhelm you!',
+      downloadLink: 'https://solarsky.itch.io/wakefield/download/eyJleHBpcmVzIjoxNzM2NDY0NzExLCJpZCI6Mjc5MDk2M30%3d.ySqUdb24R%2f2ZaG85TyaIu8S7cas%3d',
     },
     {
-      title: 'Game 2',
-      images: ['path/to/image4.jpg', 'path/to/image5.jpg'],
-      description: 'An exciting adventure where...',
+      title: 'Frankenstines Hitman',
+      frontImage: "/portfolio/FrankenstineResources/Title.png",
+      images: ['/portfolio/FrankenstineResources/img1.png', '/portfolio/FrankenstineResources/img2.png', '/portfolio/FrankenstineResources/img3.png', '/portfolio/FrankenstineResources/img4.png', '/portfolio/FrankenstineResources/img5.png'],
+      frontDescription: "A single player, first person, Doom64-like, made in a Game Jam.",
+      description: 'You may be a monster. . Actually, thats it. With your trusty revolver, you must wade through hordes of enemies who try and stand in your way as you make for your target.',
+      downloadLink: 'https://yourgeekeric.itch.io/frankensteins-hitman',
     },
     {
       title: 'Game 3',
       images: ['path/to/image6.jpg'], 
       description: 'A puzzle game where...',
+      downloadLink: '',
     },
   ];
 
