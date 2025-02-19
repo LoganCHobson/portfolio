@@ -34,6 +34,14 @@ function App() {
       downloadLink: 'https://solarsky.itch.io/wakefield/download/eyJleHBpcmVzIjoxNzM2NDY0NzExLCJpZCI6Mjc5MDk2M30%3d.ySqUdb24R%2f2ZaG85TyaIu8S7cas%3d',
     },
     {
+      title: 'Bath Battle',
+      frontImage: "/portfolio/BathBattleResources/Title.png",
+      images: ['/portfolio/BathBattleResources/img1.png', '/portfolio/BathBattleResources/img2.png', '/portfolio/BathBattleResources/img3.png', '/portfolio/BathBattleResources/img4.png', '/portfolio/BathBattleResources/img5.png'],
+      frontDescription: "A multiplayer, third person, battle game made in a global game.",
+      description: 'Battle your friends head to head in this peer to peer hosted smash bros - monkey ball like party game!',
+      downloadLink: 'https://globalgamejam.org/games/2025/bath-battle-3',
+    },
+    {
       title: 'Frankensteins Hitman',
       frontImage: "/portfolio/FrankenstineResources/Title.png",
       images: ['/portfolio/FrankenstineResources/img1.png', '/portfolio/FrankenstineResources/img2.png', '/portfolio/FrankenstineResources/img3.png', '/portfolio/FrankenstineResources/img4.png', '/portfolio/FrankenstineResources/img5.png'],
@@ -42,20 +50,20 @@ function App() {
       downloadLink: 'https://yourgeekeric.itch.io/frankensteins-hitman',
     },
     {
-      title: 'Astral Disorder',
-      frontImage: "/portfolio/AstralDisorderResources/Title.png",
-      images: ['/portfolio/AstralDisorderResources/img1.jpg', '/portfolio/AstralDisorderResources/img2.jpg', '/portfolio/AstralDisorderResources/img3.jpg', '/portfolio/AstralDisorderResources/img4.jpg', '/portfolio/AstralDisorderResources/img5.jpg'], 
-      frontDescription: "A single player, first person, horror game, made as a senior project with Unity.",
-      description: 'Stuck on an automated passenger terminal for space trains, you WERE tasked with maintaining the place. Instead, something unidentified crashes into the station and from it crawls an apex predator. Escape or die trying',
-      downloadLink: 'https://store.steampowered.com/app/2866580/Astral_Disorder/',
-    },
-    {
       title: 'Garden of Doom',
       frontImage: "/portfolio/GardenOfDoomResources/Title.png",
       images: ['/portfolio/GardenOfDoomResources/img1.png', '/portfolio/GardenOfDoomResources/img2.png'], 
       frontDescription: "A single player, third person, Vampire Survivors-like game, made in a Game Jam with a proprietary engine called Canis.",
       description: 'Weeding used to be a simple chore. Now its a way of life. Cleave through waves of waves of evil plants while attaining powerful upgrades to stay in the fight!',
       downloadLink: '',
+    },
+    {
+      title: 'Astral Disorder',
+      frontImage: "/portfolio/AstralDisorderResources/Title.png",
+      images: ['/portfolio/AstralDisorderResources/img1.jpg', '/portfolio/AstralDisorderResources/img2.jpg', '/portfolio/AstralDisorderResources/img3.jpg', '/portfolio/AstralDisorderResources/img4.jpg', '/portfolio/AstralDisorderResources/img5.jpg'], 
+      frontDescription: "A single player, first person, horror game, made as a senior project with Unity.",
+      description: 'Stuck on an automated passenger terminal for space trains, you WERE tasked with maintaining the place. Instead, something unidentified crashes into the station and from it crawls an apex predator. Escape or die trying',
+      downloadLink: 'https://store.steampowered.com/app/2866580/Astral_Disorder/',
     },
     {
       title: 'Crown of Screws',
